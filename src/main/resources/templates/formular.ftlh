@@ -14,7 +14,7 @@
     <form class="formular" action="/" method="post">
         <h1>Registrace na letní dětský tábor</h1>
         <label for="jmeno" class="radek">Jméno:</label>
-        [@spring.formInput path="form.jmeno"/]
+        [@spring.formInput path="form.jmeno" /]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
         <label for="prijmeni" class="radek">Příjmení:</label>
@@ -22,7 +22,7 @@
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
         <label for="datum-narozeni" class="radek">Datum narození:</label>
-        <input id="birth-date" name="birthDate" type="date"/>
+        <input id="birth-date" name="datumNarozeni" type="date"/>
         [@spring.bind "form.datumNarozeni"/]
         <div class="error">[@spring.showErrors "<br>"/]</div>
 
@@ -60,9 +60,7 @@
         <div class="radek controls">
             <button type="submit">Odeslat</button>
         </div>
-
     </form>
 </div>
-
 </body>
 </html>

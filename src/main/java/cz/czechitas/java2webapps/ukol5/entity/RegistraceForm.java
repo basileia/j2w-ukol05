@@ -1,21 +1,23 @@
 package cz.czechitas.java2webapps.ukol5.entity;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 public class RegistraceForm {
 
     @NotBlank
+    @Size(max=300)
     private String jmeno;
     @NotBlank
+    @Size(max=300)
     private String prijmeni;
-    @NotBlank
     private LocalDate datumNarozeni;
     @NotNull
     private Pohlavi pohlavi;
     @NotNull
+    @NotBlank
     private String turnus;
     @Email
     private String email;
@@ -41,6 +43,7 @@ public class RegistraceForm {
         return datumNarozeni;
     }
 
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     public void setDatumNarozeni(LocalDate datumNarozeni) {
         this.datumNarozeni = datumNarozeni;
     }
