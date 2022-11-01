@@ -37,6 +37,9 @@
         <div class="radek">Telefon:</div>
         <span>${form.telefon}</span>
         [/#if]
+
+        <br>
+        <a href="/">Další registrace</a>
     </div>
 </div>
 </body>
