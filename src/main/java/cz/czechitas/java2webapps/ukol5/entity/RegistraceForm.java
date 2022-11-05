@@ -13,6 +13,7 @@ public class RegistraceForm {
     @NotBlank
     @Size(max=300)
     private String prijmeni;
+    @NotNull
     private LocalDate datumNarozeni;
     @NotNull
     private Pohlavi pohlavi;

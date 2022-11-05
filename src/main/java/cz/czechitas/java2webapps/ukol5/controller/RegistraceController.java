@@ -26,9 +26,9 @@ public class RegistraceController {
   }
 
   @PostMapping("/")
-  public Object form(@Valid @ModelAttribute("form") RegistraceForm form, BindingResult bindingResult) {
+  public String form(@Valid @ModelAttribute("form") RegistraceForm form, BindingResult bindingResult) {
 
-    try {
+    if(form.getDatumNarozeni() != null) {
       Period period = form.getDatumNarozeni().until(LocalDate.now());
       int vek = period.getYears();
       if ((9 > vek) || (vek > 15)) {
@@ -36,7 +36,7 @@ public class RegistraceController {
         return "/formular";
       }
     }
-    catch (NullPointerException e) {
+    else {
       bindingResult.rejectValue("datumNarozeni", "error.RegistraceForm", "datum nerození je povinný údaj");
     }
 
