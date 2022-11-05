@@ -29,11 +29,11 @@
         <div class="radek">Pohlaví:</div>
         <div class="pohlavi">
             <div>
-                <input id="muz" type="radio" name="pohlavi" value="Muz"/>
+                <input id="muz" type="radio" name="pohlavi" value="MUZ"/>
                 <label for="muz">muž</label>
             </div>
             <div>
-                <input id="zena" type="radio" name="pohlavi" value="Zena"/>
+                <input id="zena" type="radio" name="pohlavi" value="ZENA"/>
                 <label for="zena">žena</label>
             </div>
         </div>
